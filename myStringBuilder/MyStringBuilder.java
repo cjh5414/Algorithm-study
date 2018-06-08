@@ -2,26 +2,26 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 class MyStringBuilder {
-    int size = 0;
+    int count = 0;
     char[] value;
 
     public MyStringBuilder(String string) {
         value = new char[string.length() + 16];
         string.getChars(0, string.length(), value, 0);
-        size = string.length();
+        count = string.length();
     }
 
     @Override
     public String toString() {
-        return String.valueOf(value);
+        return new String(value, 0, count);
     }
 
     public void append(String string) {
-        int oldSize = size;
-        size = oldSize + string.length();
-        if(size > value.length)
+        int oldCount = count;
+        count = oldCount + string.length();
+        if(count > value.length)
             value = Arrays.copyOf(value, value.length * 2);
-        string.getChars(0, string.length(), value, oldSize);
+        string.getChars(0, string.length(), value, oldCount);
     }
 
     public static void main(String[] args) {
