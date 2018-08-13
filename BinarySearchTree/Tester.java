@@ -11,5 +11,8 @@ public class Tester {
         bst.insert(16);
         bst.insert(11);
         bst.insert(9);
+
+        bst.inOrderTraversalPrint();
+
     }
 }
