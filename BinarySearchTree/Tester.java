@@ -14,5 +14,8 @@ public class Tester {
 
         bst.inOrderTraversalPrint();
 
+        System.out.println("Find 13 : " + bst.retreive(13));
+        System.out.println("Find 7 : " + bst.retreive(7));
+        System.out.println("Find 9 : " + bst.retreive(9));
     }
 }

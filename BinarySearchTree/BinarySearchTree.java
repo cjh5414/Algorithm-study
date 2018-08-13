@@ -28,6 +28,18 @@ class BinarySearchTree {
         }
     }
 
+    public boolean retreive(int val) {
+        Node tmp = root;
+
+        while (tmp != null && val != tmp.value) {
+            if (val < tmp.value) tmp = tmp.left;
+            else tmp = tmp.right;
+        }
+
+        if (tmp == null) return false;
+        else return true;
+    }
+
     public void inOrderTraversalPrint() {
         inOrderTraversalPrint(root);
     }
