@@ -17,5 +17,25 @@ public class Tester {
         System.out.println("Find 13 : " + bst.retreive(13));
         System.out.println("Find 7 : " + bst.retreive(7));
         System.out.println("Find 9 : " + bst.retreive(9));
+
+        System.out.println("Del 20 : " + bst.delete(20));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 11 : " + bst.delete(11));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 9 : " + bst.delete(9));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 9 : " + bst.delete(9));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 3 : " + bst.delete(3));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
     }
 }

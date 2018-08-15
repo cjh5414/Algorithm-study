@@ -40,6 +40,35 @@ class BinarySearchTree {
         else return true;
     }
 
+    public boolean delete(int val) {
+        Node parent = root;
+        Node tmpParent;
+        Node tmp = root;
+
+        while (tmp != null && val != tmp.value) {
+            parent = tmp;
+            if (val < tmp.value) tmp = tmp.left;
+            else tmp = tmp.right;
+        }
+
+        if (tmp == null) return false;
+
+        else if (tmp.left == null && tmp.right == null) {
+            if (val < parent.value) parent.left = null;
+            else parent.right = null;
+        }
+        else {
+            tmpParent = parent;
+            if (tmp.right != null) {
+
+
+            }
+            else
+        }
+
+        return true;
+    }
+
     public void inOrderTraversalPrint() {
         inOrderTraversalPrint(root);
     }
