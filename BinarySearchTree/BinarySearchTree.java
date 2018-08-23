@@ -66,10 +66,28 @@ class BinarySearchTree {
             else parent.right = tmp.left;
         }
         else {
-
+            int min = deleteMinNode(tmp.right);
+            tmp.value = min;
         }
 
         return true;
+    }
+
+    public int deleteMinNode(Node root) {
+        Node parent = root;
+        Node minNode = root;
+
+        while (minNode.left != null) {
+            parent = minNode;
+            minNode = minNode.left;
+        }
+
+        if (minNode.right == null)
+            parent.left = minNode.right;
+        else
+            parent.left = null;
+
+        return minNode.value;
     }
 
     public void inOrderTraversalPrint() {

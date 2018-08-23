@@ -11,6 +11,10 @@ public class Tester {
         bst.insert(16);
         bst.insert(11);
         bst.insert(9);
+        bst.insert(30);
+        bst.insert(25);
+        bst.insert(23);
+        bst.insert(32);
 
         bst.inOrderTraversalPrint();
 
@@ -35,6 +39,10 @@ public class Tester {
         System.out.println("");
 
         System.out.println("Del 3 : " + bst.delete(3));
+        bst.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 2 : " + bst.delete(2));
         bst.inOrderTraversalPrint();
         System.out.println("");
     }
