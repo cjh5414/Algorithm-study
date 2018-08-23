@@ -57,13 +57,16 @@ class BinarySearchTree {
             if (val < parent.value) parent.left = null;
             else parent.right = null;
         }
+        else if (tmp.left == null && tmp.right != null) {
+            if (val < parent.value) parent.left = tmp.right;
+            else parent.right = tmp.right;
+        }
+        else if (tmp.left != null && tmp.right == null) {
+            if (val < parent.value) parent.left = tmp.left;
+            else parent.right = tmp.left;
+        }
         else {
-            tmpParent = parent;
-            if (tmp.right != null) {
 
-
-            }
-            else
         }
 
         return true;
