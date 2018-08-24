@@ -62,6 +62,18 @@ class BinarySearchTree {
         else return true;
     }
 
+    public boolean retreiveRcs(int val) {
+        if (root == null) return false;
+        return retreiveRcs(root, val);
+    }
+
+    public boolean retreiveRcs(Node node, int val) {
+        if (node == null) return false;
+        else if (node.value == val) return true;
+        else if (val < node.value) return retreiveRcs(node.left, val);
+        else return retreiveRcs(node.right, val);
+    }
+
     public boolean delete(int val) {
         Node parent = root;
         Node tmpParent;

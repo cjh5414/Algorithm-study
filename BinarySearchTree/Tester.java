@@ -64,9 +64,9 @@ public class Tester {
 
         bst2.inOrderTraversalPrint();
 
-        System.out.println("Find 13 : " + bst2.retreive(13));
-        System.out.println("Find 7 : " + bst2.retreive(7));
-        System.out.println("Find 9 : " + bst2.retreive(9));
+        System.out.println("Find 13 : " + bst2.retreiveRcs(13));
+        System.out.println("Find 7 : " + bst2.retreiveRcs(7));
+        System.out.println("Find 9 : " + bst2.retreiveRcs(9));
 
         System.out.println("Del 20 : " + bst2.delete(20));
         bst2.inOrderTraversalPrint();
