@@ -45,5 +45,51 @@ public class Tester {
         System.out.println("Del 2 : " + bst.delete(2));
         bst.inOrderTraversalPrint();
         System.out.println("");
+
+
+        System.out.println("Recursive BinarySearchTree");
+        BinarySearchTree bst2 = new BinarySearchTree();
+
+        bst2.insertRcs(3);
+        bst2.insertRcs(20);
+        bst2.insertRcs(13);
+        bst2.insertRcs(2);
+        bst2.insertRcs(16);
+        bst2.insertRcs(11);
+        bst2.insertRcs(9);
+        bst2.insertRcs(30);
+        bst2.insertRcs(25);
+        bst2.insertRcs(23);
+        bst2.insertRcs(32);
+
+        bst2.inOrderTraversalPrint();
+
+        System.out.println("Find 13 : " + bst2.retreive(13));
+        System.out.println("Find 7 : " + bst2.retreive(7));
+        System.out.println("Find 9 : " + bst2.retreive(9));
+
+        System.out.println("Del 20 : " + bst2.delete(20));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 11 : " + bst2.delete(11));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 9 : " + bst2.delete(9));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 9 : " + bst2.delete(9));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 3 : " + bst2.delete(3));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
+
+        System.out.println("Del 2 : " + bst2.delete(2));
+        bst2.inOrderTraversalPrint();
+        System.out.println("");
     }
 }

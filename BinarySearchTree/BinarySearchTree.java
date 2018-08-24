@@ -28,6 +28,28 @@ class BinarySearchTree {
         }
     }
 
+    public void insertRcs(int value) {
+        if (root == null)
+            root = new Node(value);
+        else
+            insertRcs(root, value);
+    }
+
+    public void insertRcs(Node node, int value) {
+        if (value < node.value) {
+            if (node.left == null)
+                node.left = new Node(value);
+            else
+                insertRcs(node.left, value);
+        }
+        else {
+            if (node.right == null)
+                node.right = new Node(value);
+            else
+                insertRcs(node.right, value);
+        }
+    }
+
     public boolean retreive(int val) {
         Node tmp = root;
 
