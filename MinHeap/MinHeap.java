@@ -5,13 +5,15 @@ class MinHeap {
     int[] heap = new int[256];
 
     public void insert(int val) {
-        int tmpIdx = this.idx;
+        int tmpIdx = idx;
+        heap[idx] = val;
+
         while (tmpIdx != 1 && heap[tmpIdx] < heap[tmpIdx / 2]) {
+            int tmp = heap[tmpIdx];
+            heap[tmpIdx] = heap[tmpIdx / 2];
+            heap[tmpIdx / 2] = tmp;
             tmpIdx = tmpIdx / 2;
         }
-
-        heap[idx] = heap[tmpIdx];
-        heap[tmpIdx] = val;
         idx++;
     }
 
@@ -21,6 +23,10 @@ class MinHeap {
 
 
     public void print() {
-        return;
+        for (int i=1; i<idx; i++) {
+            System.out.print(heap[i]);
+            System.out.print(" ");
+        }
+        System.out.println();
     }
 }
