@@ -14,5 +14,11 @@ class Tester {
         minHeap.insert(4);
 
         minHeap.print();
+
+        System.out.println("Delete : " + minHeap.delete());
+        minHeap.print();
+
+        System.out.println("Delete : " + minHeap.delete());
+        minHeap.print();
     }
 }
