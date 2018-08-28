@@ -6,14 +6,13 @@ class MinHeap {
 
     public void insert(int val) {
         int tmpIdx = idx;
-        heap[idx] = val;
 
-        while (tmpIdx != 1 && heap[tmpIdx] < heap[tmpIdx / 2]) {
-            int tmp = heap[tmpIdx];
+        while (tmpIdx != 1 && val < heap[tmpIdx / 2]) {
             heap[tmpIdx] = heap[tmpIdx / 2];
-            heap[tmpIdx / 2] = tmp;
             tmpIdx = tmpIdx / 2;
         }
+
+        heap[tmpIdx] = val;
         idx++;
     }
 

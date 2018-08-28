@@ -11,6 +11,7 @@ class Tester {
         minHeap.insert(8);
         minHeap.insert(3);
         minHeap.insert(6);
+        minHeap.insert(4);
 
         minHeap.print();
     }
