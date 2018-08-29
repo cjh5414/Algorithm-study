@@ -76,7 +76,6 @@ class BinarySearchTree {
 
     public boolean delete(int val) {
         Node parent = root;
-        Node tmpParent;
         Node tmp = root;
 
         while (tmp != null && val != tmp.value) {
